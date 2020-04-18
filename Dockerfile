@@ -11,7 +11,7 @@ LABEL com.gableroux.flutter.name="debian linux image for Flutter" \
       com.gableroux.flutter.vcs-url="https://github.com/gableroux/docker-flutter"
 
 # Assign working directory
-WORKDIR $WORKING_DIRECTORY
+WORKDIR "${WORKING_DIRECTORY:-/}"
 
 RUN apt update -y
 RUN apt install -y \
